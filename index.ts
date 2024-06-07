@@ -8,7 +8,7 @@ dotenv.config();
 const app: Express = express();
 app.use(express.json())
 app.use(cors())
-const port = process.env.BACKEND_PORT || 3001;
+const port = process.env.PORT || 3001;
 const prisma = new PrismaClient()
 
 app.get("/tasks", async(req: Request, res: Response) => {
